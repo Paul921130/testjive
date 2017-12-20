@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--當用手機選擇看電腦版時請使用以下viewport
+<meta name="viewport" content="width=980">
+-- >
+<title>雄獅旅遊網：規劃旅遊行程、機票、訂房、自由行的首選網站</title>
+<meta name='description' content='雄獅旅遊網提供國外團體旅遊、台灣團體旅遊、機票、訂房、自由行、航空假期、票券、高鐵及主題旅遊等全方位服務，提供最完善的旅遊資訊，致力成為全球旅人最愛的旅遊網站' />
+<link href="http://www.liontravel.com/favicon.ico" rel="shortcut icon">
+<!-- 載入設計資源庫Core -->
+<link href="sass/core.css" rel="stylesheet">
+<!-- 載入設計資源庫元件 -->
+<link href="sass/components/th_lnop/css.css" rel="stylesheet">
+<link href="sass/components/tp_lnop/css.css" rel="stylesheet">
+<link href="sass/components/alt_lnop/css.css" rel="stylesheet">
+<link href="sass/components/bt_lnop/css.css" rel="stylesheet">
+<link href="sass/components/bt_oplg/css.css" rel="stylesheet">
+<link href="sass/components/ntb_pcss/css.css" rel="stylesheet">
+<link href="sass/components/fcl_lnls/css.css" rel="stylesheet">
+<link href="sass/components/hr_lgop/css.css" rel="stylesheet">
+<!-- 載入設計資源庫模組 -->
+<link href="sass/modules/int_lnop/css.css" rel="stylesheet">
+<link href="sass/modules/lbx_lnop/css.css" rel="stylesheet">
+<link href="sass/modules/cl_opsm/css.css" rel="stylesheet">
+<!-- 載入自訂樣式 -->
+<link href="css/" rel="stylesheet">
+</head>
+<body>
+
+<a href="#" class="bt_lnop w_auto lbx_lnopBtn" data-section="login">pc裝置登入</a>
+<a href="#" class="bt_lnop w_auto lbx_lnopBtn" data-section="register-1" data-max-width="709">pc裝置註冊</a>
+<h3>特別Lightbox模式</h3>
+<ul>
+	<li><a href="login_include.html">login_include.html</a></li>
+	<li><a href="login_include_single.html">login_include_single.html</a></li>
+</ul>
+
+<h3>mobile裝置登入（舊天地）</h3>
+<ul>
+	<li><a href="m_login.html">m_login.html</a></li>
+	<li><a href="m_register1.html">m_register1.html</a></li>
+	<li><a href="m_register2.html">m_register2.html</a></li>
+	<li><a href="m_transfer1.html">m_transfer1.html</a></li>
+	<li><a href="m_transfer2.html">m_transfer2.html</a></li>
+	<li><a href="m_transfer3.html">m_transfer3.html</a></li>
+	<li><a href="m_forget.html">m_forget.html</a></li>
+	<li><a href="m_forgetrans.html">m_forgetrans.html</a></li>
+	<li><a href="m_sent.html">m_sent.html</a></li>
+	<li><a href="m_noreceive.html">m_noreceive.html</a></li>
+	<li><a href="m_signup_success.html">m_signup_success.html</a></li>
+	<li><a href="m_unverified.html">m_unverified.html</a></li>
+</ul>
+
+<h3>mobile裝置登入（新天地）</h3>
+<ul>
+	<li><a href="member_login.html">member_login.html</a></li>
+	<li><a href="member_register1.html">member_register1.html</a></li>
+	<li><a href="member_register2.html">member_register2.html</a></li>
+	<li><a href="member_3party.html">member_3party.html</a></li>
+	<li><a href="member_transfer1.html">member_transfer1.html</a></li>
+	<li><a href="member_transfer2.html">member_transfer2.html</a></li>
+	<li><a href="member_transfer3.html">member_transfer3.html</a></li>
+	<li><a href="member_forget.html">member_forget.html</a></li>
+	<li><a href="member_forgetrans.html">member_forgetrans.html</a></li>
+	<li><a href="member_sent.html">member_sent.html</a></li>
+	<li><a href="member_noreceive.html">member_noreceive.html</a></li>
+	<li><a href="member_signup_success.html">member_signup_success.html</a></li>
+	<li><a href="member_unverified.html">member_unverified.html</a></li>
+</ul>
+
+<div id="lionLogin" class="lbx_lnop">
+	<div class="lbx_lnop_dialog">
+		<div class="lbx_lnop_content">
+			<a href="#" class="closeBtn"></a>
+			<div class="login-container wrap">
+				<div class="section" data-section="login">
+					<h3 class="th_lnop">會員登入</h3>
+					<div class="m-t-md clearfix">
+						<div class="col-xs-12 txt-center">
+							<a class="bt_oplg facebook" href="#" data-handler="readterm" data-next="3party" data-driection="bottom"><span>FB<br>登入</span></a>
+						</div>
+						<div class="col-xs-12 txt-center">
+							<a class="bt_oplg google" href="#" data-handler="readterm" data-next="3party" data-driection="bottom"><span>G+<br>登入</span></a>
+						</div>
+						<!-- <div class="col-xs-8 txt-center">
+							<a class="bt_oplg identity" href="#" data-handler="readterm" data-next="transfer-1" data-driection="bottom">身分證<br>登入<span>身分證<br>登入</span></a>
+						</div> -->
+					</div>
+					<div class="m-t-sm m-b-sm hr_lgop"><span>或是</span></div>
+					<div class="int_lnop animate">
+						<div class="form_input">
+							<input name="id" placeholder="E-mail、手機號碼、身分證字號" type="text">
+						</div>
+						<div class="form_input">
+							<input name="password" placeholder="密碼" type="password">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b bt_lnop" data-handler="login" data-next="unverified" data-driection="right">登入</a>
+					<p class="txt-center"><a href="#" data-handler="readterm" data-next="register-1" data-driection="right">免費註冊</a> | <a href="#" data-next="forget" data-driection="bottom">忘記密碼？</a></p>
+				</div>
+				<div class="section fcl_lnls" data-section="register-1">
+					<h3 class="th_lnop">會員註冊</h3>
+					<p class="m-t-sm">為保障您的權益，加入會員時請詳閱！</p>
+					<div class="fm-grp w-full">
+						<textarea class="fm-ctrl w-full h-lg">服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務</textarea>
+					</div>
+					<label class="need-read l3"><input class="align-middle" name="term" type="checkbox">是的，我要享有雄獅旅行社及其關係企業（欣傳媒、傑森行銷、雄獅通運）所提供的旅遊好康優惠訊息，並享有雄獅集團會員專屬電子報、雄獅集團會員專屬贈獎活動權利，並得知最新的旅遊資訊。(掌握第一手的雄獅旅遊好康及全球最即時的旅遊資訊！)</label>
+					<label class="need-read"><input class="align-middle" name="insurance" type="checkbox">是的，我要享有 <a href="#">《 百萬海外旅綜險保障 》</a>的好</label>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="b-no bt_lnop" data-handler="agree" data-next="register-2" data-driection="right">同意，繼續註冊</a>
+				</div>
+				<div class="section" data-section="register-2">
+					<h3 class="th_lnop">免費註冊</h3>
+					<div class="m-t-xs m-t-md clearfix">
+						<div class="col-xs-12 txt-center">
+							<a class="bt_oplg facebook" href="javascript:;" data-handler="readterm" data-next="3party" data-driection="bottom"><span>FB<br>登入</span></a>
+						</div>
+						<div class="col-xs-12 txt-center">
+							<a class="bt_oplg google" href="javascript:;" data-handler="readterm" data-next="3party" data-driection="bottom"><span>G+<br>登入</span></a>
+						</div>
+					</div>
+					<div class="m-t-sm m-b-sm hr_lgop"><span>或是</span></div>
+
+					<div class="int_lnop animate">
+						<div class="form_input">
+							<input name="id" placeholder="E-mail" type="text">
+						</div>
+						<div class="form_input">
+							<input name="password" placeholder="設定密碼" type="password">
+						</div>
+						<div class="form_input m-b">
+							<input name="confirm" placeholder="密碼確認" type="password">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="register" data-next="sent" data-driection="right">註冊</a>
+					<p class="txt-center"><a href="#" data-next="login" data-driection="left">會員登入</a> | <a href="#" data-next="noreceive" data-handler="register2" data-driection="right">沒有收到驗證信？</a></p>
+				</div>
+				<div class="section fcl_lnls" data-section="3party">
+					<h3 class="th_lnop">第三方註冊條款</h3>
+					<p class="m-t-sm">為保障您的權益，加入會員時請詳閱！</p>
+					<div class="fm-grp w-full">
+						<textarea class="fm-ctrl w-full h-lg">服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務</textarea>
+					</div>
+					<label class="need-read l3"><input class="align-middle" type="checkbox">是的，我要享有雄獅旅行社及其關係企業（欣傳媒、傑森行銷、雄獅通運）所提供的旅遊好康優惠訊息，並享有雄獅集團會員專屬電子報、雄獅集團會員專屬贈獎活動權利，並得知最新的旅遊資訊。(掌握第一手的雄獅旅遊好康及全球最即時的旅遊資訊！)</label>
+					<label class="need-read"><input class="align-middle" type="checkbox">是的，我要享有 <a href="#">《 百萬海外旅綜險保障 》</a>的好</label>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="threeParty">同意，繼續註冊</a>
+				</div>
+				<div class="section fcl_lnls" data-section="transfer-1">
+					<h3 class="th_lnop">舊轉新會員條款</h3>
+					<p class="m-t-xs">為保障您的權益，請詳閱！</p>
+					<div class="fm-grp w-full m-b">
+						<textarea class="fm-ctrl w-full h-lg">服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務 服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務條款服務</textarea>
+					</div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="agree" data-next="transfer-2" data-driection="right">同意，繼續進行</a>
+				</div>
+				<div class="section" data-section="transfer-2">
+					<h3 class="th_lnop">舊會員登入</h3>
+					<div class="m-t int_lnop animate">
+						<div class="form_input m-b">
+							<input class="m-b-xxs" name="id" placeholder="身份證字號" type="text">
+							<span class="c-gray">非台灣籍身份請輸入「手機」或「護照」號碼</span>
+						</div>
+						<div class="form_input">
+							<input name="password" placeholder="密碼" type="password">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="tranCheck" data-next="transfer-3" data-driection="right">轉換為新會員</a>
+					<p class="txt-center"><a href="#" data-next="forgetrans" data-driection="right">忘記密碼？</a></p>
+					<div class="cl_opsm forlbxlnop">
+						<div class="slide"><img src="http://fakeimg.pl/400x130/?text=Hello"></div>
+						<div class="slide"><img src="http://fakeimg.pl/400x130/?text=Hello2"></div>
+						<div class="slide"><img src="http://fakeimg.pl/400x130/?text=Hello3"></div>
+					</div>
+				</div>
+				<div class="section" data-section="transfer-3">
+					<h3 class="th_lnop">轉換為新會員</h3>
+					<p class="m-t-sm">只要再一個步驟，即可享受全新會員服務!</p>
+					<div class="int_lnop animate">
+						<div class="form_input">
+							<input name="email" placeholder="E-mail" type="text">
+						</div>
+						<div class="form_input">
+							<input name="password" placeholder="設定密碼" type="password">
+						</div>
+						<div class="form_input">
+							<input name="confirm" placeholder="密碼確認" type="password">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<!-- <label class="need-read m-b-xl"><input class="align-middle" type="checkbox">同時轉移舊會員資料到此E-mail帳號內</label> -->
+					<a href="#" class="m-b b-no bt_lnop" data-handler="tranAgree" data-next="sent" data-driection="right">是的，同意轉換</a>
+					<p class="txt-center"><a href="" data-handler="nextTime">不，下次再說</a></p>
+				</div>
+				<div class="section" data-section="forget">
+					<h3 class="th_lnop">忘記密碼</h3>
+					<div class="tipMsg"><p class="m-t tips tp_lnop"></p></div>
+					<div class="ntb_pcss">
+						<input type="radio" name="ntb_pcss" checked="checked" id="tab1" class="tab1">
+						<label class="tab" for="tab1">E-mail 找回</label>
+						<input type="radio" name="ntb_pcss" id="tab2" class="tab2">
+						<label class="tab" for="tab2">手機號碼找回</label>
+						<div class="tab_content">
+							<div class="content">
+								<div class="m-t m-b int_lnop animate">
+									<div class="form_input">
+										<input name="email" placeholder="註冊時使用的E-mail" type="text">
+									</div>
+								</div>
+								<div class="msgSection"><p class="alert alt_lnop"></p></div>
+								<a href="#" class="b-no bt_lnop" data-handler="forget">重新設定密碼</a>
+							</div>
+							<div class="content fcl_lnls">
+								<div class="fm-grp m-t m-b clearfix">
+									<div class="int-grp m-b-sm">
+										<div class="int">
+											<select name="country" class="fm-ctrl caret lg" id="exampleSelect">
+												<option selected="selected">+886 台灣</option>
+												<option value="1">+86 中國人陸</option>
+											</select>
+										</div>
+										<div class="int">
+											<input name="phone" type="text" class="fm-ctrl lg" id="exampleLabelInside" placeholder="請輸入手機號碼">
+										</div>
+									</div>
+								</div>
+								<div class="msgSection"><p class="alert alt_lnop"></p></div>
+								<div href="#" class="bt_lnop addon">
+									<div class="int">
+										<input class="input" type="text" placeholder="輸入簡訊驗證碼">
+									</div>
+									<a href="#" class="btn" data-handler="forgetbyphone">獲取驗證碼</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section" data-section="forgetrans">
+					<h3 class="th_lnop">忘記密碼</h3>
+					<div class="tipMsg"><p class="m-t tips tp_lnop"></p></div>
+					<p class="m-t">系統將發送密碼至您的註冊信箱</p>
+					<div class="m-t int_lnop animate">
+						<div class="form_input m-b">
+							<input class="m-b-xxs" name="id" placeholder="身份證字號" type="text">
+							<span class="c-gray">非台灣籍身份請輸入「手機」或「護照」號碼</span>
+						</div>
+						<div class="form_input m-b-sm">
+							<input name="email" placeholder="註冊時使用的E-mail" type="text">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="forgetrans">重新設定密碼</a>
+				</div>
+				<div class="section" data-section="noreceive">
+					<h3 class="th_lnop">沒有收到驗證信？</h3>
+					<div class="tipMsg"><p class="m-t tips tp_lnop"></p></div>
+					<div class="m-t int_lnop animate">
+						<div class="form_input m-b-sm">
+							<input name="email" placeholder="E-mail" type="text">
+						</div>
+					</div>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="noreceive">重新寄送驗證信</a>
+					<p class="txt-center"><a href="#" data-handler="readterm" data-next="register-1" data-driection="left">免費註冊</a> | <a href="#"  data-next="login" data-driection="left">會員登入</a></p>
+				</div>
+				<div class="section" data-section="sent">
+					<h3 class="th_lnop">會員驗證信件已寄出！</h3>
+					<div class="tipMsg show"><p class="m-t tips tp_lnop">成功!!已經重新寄到您的信箱中!!</p></div>
+					<p class="m-b">請到您註冊時的E-mail中，<br/>開啟驗證信件,完成會員申請.</p>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="sent">重新寄送驗證信</a>
+				</div>
+				<div class="section" data-section="unverified">
+					<h3 class="th_lnop">尚未驗證！</h3>
+					<div class="tipMsg m-t-lg m-b-lg"><p class="tips tp_lnop"></p></div>
+					<p class="m-t-lg m-b-lg tp_lnop">驗證信過期，請重新補發驗證信件</p>
+					<div class="msgSection"><p class="alert alt_lnop"></p></div>
+					<a href="#" class="m-b b-no bt_lnop" data-handler="unverified">重新寄送驗證信</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<!-- 載入外部javascript library -->
+<script src="./lib/jquery/dist/jquery.min.js"></script>
+<script src="./lib/moment/min/moment.min.js"></script>
+<script src="./lib/jquery-touch-events/src/jquery.mobile-events.min.js"></script>
+<!-- 載入設計資源庫模組javascript -->
+<script src="./sass/modules/cl_opsm/module.js"></script>
+<script src="./sass/modules/int_lnop/module.js"></script>
+<script src="./sass/modules/lbx_lnop/module.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	// 修改lbx_lnop模組
+	//$('.lbx_lnop_dialog').css({'display':'table','max-width':'auto'});
+	$('#lionLogin').lbx_lnop({
+		// 開啟lightbox的按鈕
+		trigger: '.lbx_lnopBtn',
+		// backdrop的string selector
+		backdrop: '.lbx_lnop',
+		// 在這裡設定當click登入button element後的第一個畫面，畫面的值請參考html中設有data-section屬性的值
+		firstView: null,
+		// 設定馬上要跳出的畫面，型態為string，值為html中設有data-section屬性，或是用function return您要的畫面值
+		showViewAuto: null,
+		// 是否要開啟iframe的message監聽
+		childListener: false,
+		// 為有設定data-handler屬性的dom設定相對應要執行的funtion，key值需要與data-handler的值相同
+		handler: {
+			login: function($btn,$section,data,$nextSection,nextSlide) {
+				if ( !$btn.hasClass('active') ) {
+					console.log($section,data);
+					var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+					var phoneRegex = /^[09]{2}[0-9]{8}$/;
+					var idRegex = /^[A-Z]{1}[0-9]{9}$/;
+					var errorString = {
+						enterAccount: '請正確輸入E-mail、手機號碼、身分證字號',
+						enterPassword: '請輸入您的密碼',
+						returnError: '帳號或密碼錯誤'
+					};
+					var $msgSection = $section.find('.msgSection');
+					var $errMsg = $msgSection.children('.alert').text('');
+					// 檢單表單是否有錯誤的地方
+					if ( !emailRegex.test(data.id) && !phoneRegex.test(data.id) && !idRegex.test(data.id) ) {
+						$errMsg.text(errorString.enterAccount);
+					} else if ( data.password.length < 1 ) {
+						$errMsg.text(errorString.enterPassword);
+					} else {
+						$errMsg.text('');
+					}
+					// 有表單錯誤時執行
+					if ( $errMsg.text().length > 1 ) {
+						$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+					} else {
+					// 表單沒有錯誤時執行
+						$msgSection.hide();
+						if ( idRegex.test(data.id) ) {
+							// 如果輸入的是舊會員的身分證字號
+							$btn.attr({'data-next': 'transfer-3', 'data-driection': 'bottom'});
+						}
+						// 改變登入button狀態
+						$btn.addClass('active');
+						$btn.text('登入中');
+						var loging = setInterval(function() {
+							var txt = $btn.text();
+							var dotLength = txt.match(/\./g);
+							if ( !dotLength ) {
+								txt += '.';
+							} else if ( dotLength.length < 3 ) {
+								txt += '.';
+							} else if ( dotLength.length > 2 ) {
+								txt = '登入中';
+							}
+							$btn.text(txt);
+						}, 500);
+						// 帳號密碼驗證成功時，目前是假裝5秒後成功登入，IT在做時可以刪除
+						/*
+						var fakeAjax = setTimeout( function() {
+							// 離開lightbox
+							$('.lbx_lnop').click();
+							// 取消login setInterval
+							clearInterval(loging);
+							// 變更button樣式
+							$btn.text('登入');
+							$btn.removeClass('active');
+							clearTimeout(fakeAjax);
+						}, 5000);
+						*/
+						// 帳號密碼驗證成功時，是尚未驗證的的帳號，導到尚未驗證的畫面
+						var fakeAjax = setTimeout( function() {
+							// 取消login setInterval
+							clearInterval(loging);
+							// 變更button樣式
+							$btn.text('登入');
+							$btn.removeClass('active');
+							// 進入帳號尚未驗證畫面
+							nextSlide();
+							clearTimeout(fakeAjax);
+						}, 5000);
+					}
+				}
+			},
+			readterm: function($btn,$section,data,$nextSection,nextSlide) {
+				$('.lbx_lnop_dialog').animate({'max-width':'709px'}, 500);
+				var nextNextName = $nextSection.find('[data-next]').attr('data-next');
+				var $nextNextSection = $('.section[data-section=' + nextNextName + ']');
+				$nextNextSection.width(400);
+				nextSlide();
+			},
+			register: function($btn,$section,data,$nextSection,nextSlide) {
+				var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				var errorString = {
+					enterAccount: '請正確輸入email',
+					enterPassword: '請輸入您的密碼',
+					confirmPassword: '請輸入第二次密碼',
+					differentPassword: '您的密碼與第二次輸入的不同',
+					returnError: '帳號已有人使用'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				$msgSection.hide();
+				// 檢單表單是否有錯誤的地方
+				if ( !emailRegex.test(data.id) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( data.password.length < 1 ) {
+					$errMsg.text(errorString.enterPassword);
+				} else if ( data.confirm.length < 1 ) {
+					$errMsg.text(errorString.confirmPassword);
+				} else if ( data.password != data.confirm ) {
+					$errMsg.text(errorString.differentPassword);
+				} else {
+					$errMsg.text('');
+				}
+				// 表單有錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.hide();
+					if ( !$btn.hasClass('active') ) {
+						// 改變登入button狀態
+						$btn.addClass('active');
+						$btn.text('註冊中');
+						// 註冊中
+						var registing = setInterval(function() {
+							var txt = $btn.text();
+							var dotLength = txt.match(/\./g);
+							if ( !dotLength ) {
+								txt += '.';
+							} else if ( dotLength.length < 3 ) {
+								txt += '.';
+							} else if ( dotLength.length > 2 ) {
+								txt = '註冊中';
+							}
+							$btn.text(txt);
+						}, 500);
+						// 後端帳號密碼驗證成功時
+						var fakeAjax = setTimeout( function() {
+							// 取消login setInterval
+							clearInterval(registing);
+							// 變更button樣式
+							$btn.text('註冊');
+							$btn.removeClass('active');
+							clearTimeout(fakeAjax);
+							// 執行nextSlide callback 進入下一個step
+							nextSlide();
+						}, 5000);
+					}
+				}
+			},
+			register2: function($btn,$section,data,$nextSection,nextSlide) {
+				// 初始下一個畫面
+				var $tipSection = $nextSection.find('.tipMsg');
+				var $tipMsg = $nextSection.children('.tips');
+				$tipMsg.text('');
+				$tipSection.hide();
+				nextSlide();
+			},
+			agree: function($btn,$section,data,$nextSection,nextSlide) {
+				var $msgSection = $section.find('.msgSection');
+				// 將在下一個step加入hidden input
+				for ( var key in data ) {
+					$nextSection.append('<input type="hidden" name="' + key + '" value="' + data[key] + '">');
+				}
+				// 執行nextSlide callback 進入下一個step
+				$('.lbx_lnop_dialog').animate({'max-width':'429px'}, 500, function() {
+					$(this).attr('style','');
+				});
+				nextSlide();
+			},
+			tranCheck: function ($btn,$section,data,$nextSection,nextSlide) {
+				var idRegex = /([A-Z]|[a-z])\d{9}/;
+				var phoneRegex = /^[09]{2}[0-9]{8}$/;
+				var passportRegex = /./; // 不太確定護照的regex應該怎麼設
+				var errorString = {
+					enterAccount: '請正確輸入身份證字號或手機電話號碼',
+					enterPassword: '請輸入您的密碼',
+					returnError: '帳號或密碼錯誤'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				// 檢單表單是否有錯誤的地方
+				if ( !idRegex.test(data.id) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( !phoneRegex.test(data.id) && !passportRegex.test(data.id) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( data.password.length < 1 ) {
+					$errMsg.text(errorString.enterPassword);
+				} else {
+					// 如果都沒有錯
+					$errMsg.text('');
+				}
+				// 有表單錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.hide();
+					if ( !$btn.hasClass('active') ) {
+						// 改變登入button狀態
+						$btn.addClass('active');
+						$btn.text('帳號確認中');
+						var checking = setInterval(function() {
+							var txt = $btn.text();
+							var dotLength = txt.match(/\./g);
+							if ( !dotLength ) {
+								txt += '.';
+							} else if ( dotLength.length < 3 ) {
+								txt += '.';
+							} else if ( dotLength.length > 2 ) {
+								txt = '帳號確認中';
+							}
+							$btn.text(txt);
+						}, 500);
+						// 帳號密碼驗證成功時，目前是假裝5秒後確認成功，IT在做時可以刪除
+						var fakeAjax = setTimeout( function() {
+							// 取消 checking setInterval
+							clearInterval(checking);
+							// 變更button樣式
+							$btn.text('轉換為新會員');
+							$btn.removeClass('active');
+							nextSlide();
+							clearTimeout(fakeAjax);
+						}, 5000);						
+					}
+				}
+			},
+			tranAgree: function ($btn,$section,data,$nextSection,nextSlide) {
+				// 此為舊轉新的舊會員登入的script
+				var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				var errorString = {
+					enterAccount: '請正確輸入email',
+					enterPassword: '請輸入您的密碼',
+					confirmPassword: '請輸入第二次密碼',
+					differentPassword: '您的密碼與第二次輸入的不同',
+					returnError: '帳號已有人使用'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				// 檢單表單是否有錯誤的地方
+				if ( !emailRegex.test(data.email) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( data.password.length < 1 ) {
+					$errMsg.text(errorString.enterPassword);
+				} else if ( data.confirm.length < 1 ) {
+					$errMsg.text(errorString.confirmPassword);
+				} else if ( data.password != data.confirm ) {
+					$errMsg.text(errorString.differentPassword);
+				} else {
+					$errMsg.text('');
+				}
+				// 表單有錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					if ( !$btn.hasClass('active') ) {
+						$msgSection.hide();
+						// 改變登入button狀態
+						$btn.addClass('active');
+						$btn.text('註冊中');
+						// 註冊中
+						var registing = setInterval(function() {
+							var txt = $btn.text();
+							var dotLength = txt.match(/\./g);
+							if ( !dotLength ) {
+								txt += '.';
+							} else if ( dotLength.length < 3 ) {
+								txt += '.';
+							} else if ( dotLength.length > 2 ) {
+								txt = '註冊中';
+							}
+							$btn.text(txt);
+						}, 500);
+						// 後端帳號密碼驗證成功時
+						var fakeAjax = setTimeout( function() {
+							// 取消login setInterval
+							clearInterval(registing);
+							// 變更button樣式
+							$btn.text('註冊');
+							$btn.removeClass('active');
+							clearTimeout(fakeAjax);
+							// 執行nextSlide callback 進入下一個step
+							nextSlide();
+						}, 5000);
+					}
+				}
+			},
+			sent: function ($btn,$section,data) {
+				var errorString = {
+					waitCountdown: '60秒後才可以重新寄送喔！'
+				};
+				var otherString = {
+					sent: '成功!!已經重新寄到您的信箱中!!請於16小時內點擊會員認證連結'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+			
+				if ( !$btn.hasClass('disabled') ) {
+					// 如果button不是在disabled的情況下
+						// 加入成功提示文字
+						$tipMsg.text(otherString.sent);
+						// 改變登入button狀態
+						$btn.addClass('disabled');
+						$btn.html('重新寄送驗證信(60)');
+						// 等待60秒中
+						var countNum = 59;
+						var sending = setInterval(function() {
+							$btn.text('重新寄送驗證信(' + parseInt(countNum--) + ')');
+							console.log(countNum);
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新寄送驗證信');
+								$btn.removeClass('disabled');
+								clearInterval(sending);
+							}
+						}, 1000);
+				} else {
+					// 如果button在disabled的情況下
+					$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+				}
+			},
+			unverified: function($btn,$section,data) {
+				var txtString = {
+					sent: '請到您註冊時的E-mail中，開啟驗證信件，完成會員申請。'
+				};
+				var errorString = {
+					waitCountdown: '60秒後才可以重新寄送喔！'
+				};
+				var tipString = {
+					sent: '成功!!已經重新寄到您的信箱中!!'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+				var $defaultTips = $section.children('p.tp_lnop');
+				if ( !$btn.hasClass('disabled') ) {
+					// 如果button不是在disabled的情況下
+						$defaultTips.hide();
+						$tipMsg.text('');
+						// 加入成功提示文字
+						$tipMsg.text(tipString.sent);
+						$tipSection.addClass('show');
+						// 改變登入button狀態
+						$btn.addClass('disabled');
+						$btn.html('重新寄送驗證信(60)');
+						// 等待60秒中
+						var countNum = 59;
+						var sending = setInterval(function() {
+							$btn.text('重新寄送驗證信(' + parseInt(countNum--) + ')');
+							console.log(countNum);
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新寄送驗證信');
+								$btn.removeClass('disabled');
+								// $tipSection.remove
+								Class('show');
+								clearInterval(sending);
+							}
+						}, 1000);
+				} else {
+					// 如果button不是在disabled的情況下
+					$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+				}
+			},
+			forget: function ($btn,$section,data) {
+				var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				var errorString = {
+					enterAccount: '請正確輸入email！',
+					waitCountdown: '60秒後才可以重新寄送喔！'
+				};
+				var otherString = {
+					sent: '已經寄信到您的電子郵件信箱，可經由信件重新設定密碼!'
+				};
+				var $msgSection = $section.find('.tab_content>.content:visible .msgSection');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+				var $errMsg = $msgSection.children('.tab_content>.content:visible .alert');
+				if ( !emailRegex.test(data.email) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else {
+					$errMsg.text('');
+				}
+				// 有表單錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.removeClass('show');
+					if ( !$btn.hasClass('disabled') ) {
+						$tipSection.removeClass('show');
+						// 加入成功提示文字
+						$tipMsg.text(otherString.sent);
+						$tipSection.addClass('show');
+						// 改變登入button狀態
+						$btn.addClass('disabled');
+						$btn.text('重新設定密碼(60)');
+						// 等待60秒中
+						var countNum = 59;
+						var reset = setInterval(function() {
+							$btn.text('重新設定密碼(' + parseInt(countNum--) + ')');
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新設定密碼');
+								$btn.removeClass('disabled');
+								$tipMsg.text('');
+								$tipSection.removeClass('show');
+								clearInterval(reset);
+							}
+						}, 1000);
+						// 完成寄送，目前是假裝5秒後ajax成功寄送
+						var fakeAjax = setTimeout( function() {
+							// do something after ajax success...
+							clearTimeout(fakeAjax);
+						}, 5000);
+					} else {
+						// 如果button是在disabled的情況下
+						$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+					}
+				}
+			},
+			forgetbyphone: function ($btn,$section,data) {
+				var phoneRegex = /^[09]{2}[0-9]{8}$|^(\+86[\s-]?)?\d{11}$/;
+				var errorString = {
+					enterAccount: '請正確輸入手機號碼！',
+					waitCountdown: '120秒後才可以重新寄送喔！'
+				};
+				var otherString = {
+					sent: '已發送簡訊驗證碼至您的手機'
+				};
+				var $msgSection = $section.find('.tab_content>.content:visible .msgSection');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+				var $errMsg = $msgSection.children('.tab_content>.content:visible .alert').text('');
+				console.log($errMsg);
+				if ( !phoneRegex.test(data.phone) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else {
+					$errMsg.text('');
+				}
+				// 有表單錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.hide();
+					if ( !$btn.closest('.bt_lnop').hasClass('open') ) {
+						$tipSection.removeClass('show');
+						// 加入成功提示文字
+						$tipMsg.text(otherString.sent);
+						$tipSection.addClass('show');
+						// 改變登入button狀態
+						$btn.closest('.bt_lnop').addClass('open');
+						$btn.text('確定(1:60)');
+						// 等待120秒中
+						var countNum = 119;
+						var reset = setInterval(function() {
+							countNum--;
+							$btn.text('確定(' + (countNum>=60?('1:'+(countNum-60)):countNum) + ')');
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新獲取驗證碼');
+								$btn.closest('.bt_lnop').removeClass('open');
+								$tipMsg.text('');
+								$tipSection.removeClass('show');
+								clearInterval(reset);
+							}
+						}, 1000);
+					} else {
+					// 如果button是在disabled的情況下
+						$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+					}
+				}
+			},
+			forgetrans: function ($btn,$section,data) {
+				var idRegex = /([A-Z]|[a-z])\d{9}/;
+				var phoneRegex = /^[09]{2}[0-9]{8}$/;
+				var passportRegex = /./; // 不太確定護照的regex應該怎麼設
+				var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				var errorString = {
+					enterAccount: '請正確輸入身份證字號',
+					enterEmail: '請輸入您註冊時的E-mail',
+					waitCountdown: '60秒後才可以重新寄送喔！'
+				};
+				var otherString = {
+					sent: '已經寄信到您的電子郵件信箱，可經由信件重新設定密碼!'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+				var $errMsg = $msgSection.children('.alert').text('');
+				if ( !idRegex.test(data.id) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( !phoneRegex.test(data.id) && !passportRegex.test(data.id) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else if ( !emailRegex.test(data.email) ) {
+					$errMsg.text(errorString.enterEmail);
+				} else {
+					$errMsg.text('');
+				}
+				// 有表單錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.hide();
+					if ( !$btn.hasClass('disabled') ) {
+						// 加入成功提示文字
+						$tipSection.removeClass('show');
+						$tipMsg.text(otherString.sent);
+						$tipSection.addClass('show');
+						// 改變登入button狀態
+						$btn.addClass('disabled');
+						$btn.html('重新設定密碼(60)');
+						// 等待60秒中
+						var countNum = 59;
+						var reset = setInterval(function() {
+							$btn.text('重新設定密碼(' + parseInt(countNum--) + ')');
+							console.log(countNum);
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新設定密碼');
+								$btn.removeClass('disabled');
+								clearInterval(reset);
+							}
+						}, 1000);
+						// 完成寄送，目前是假裝5秒後ajax成功寄送
+						var fakeAjax = setTimeout( function() {
+							// do something after ajax success...
+							
+							clearTimeout(fakeAjax);
+						}, 5000);
+					} else {
+						// 如果button是在disabled的情況下
+						$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+					}
+				}
+			},
+			noreceive: function ($btn,$section,data) {
+				var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+				var errorString = {
+					enterAccount: '請正確輸入email！',
+					waitCountdown: '60秒後才可以重新寄送喔！'
+				};
+				var otherString = {
+					sent: '成功!!已經重新寄到您的信箱中!!請於16小時內點擊會員認證連結'
+				};
+				var $msgSection = $section.find('.msgSection');
+				var $errMsg = $msgSection.children('.alert').text('');
+				var $tipSection = $section.find('.tipMsg');
+				var $tipMsg = $tipSection.children('.tips');
+				if ( !emailRegex.test(data.email) ) {
+					$errMsg.text(errorString.enterAccount);
+				} else {
+					$errMsg.text('');
+				}
+				// 有表單錯誤時執行
+				if ( $errMsg.text().length > 1 ) {
+					$msgSection.append($errMsg).show().delay( 3000 ).fadeOut( 500 );
+				} else {
+				// 表單沒有錯誤時執行
+					$msgSection.hide();
+					// 如果button不是在disabled的情況下
+					if ( !$btn.hasClass('disabled') ) {
+						// 加入成功提示文字
+						$tipSection.removeClass('show');
+						$tipSection.addClass('show');
+						$tipMsg.text(otherString.sent);
+						// 改變登入button狀態
+						$btn.addClass('disabled');
+						$btn.html('重新寄送驗證信(60)');
+						// 等待60秒中
+						var countNum = 59;
+						var sending = setInterval(function() {
+							$btn.text('重新寄送驗證信(' + parseInt(countNum--) + ')');
+							console.log(countNum);
+							if (countNum < 1) {
+								// sending setInterval
+								$btn.text('重新寄送驗證信');
+								$btn.removeClass('disabled');
+								clearInterval(sending);
+							}
+						}, 1000);
+					} else {
+					// 如果button是在disabled的情況下
+						$msgSection.append($errMsg.text(errorString.waitCountdown)).show().delay( 3000 ).fadeOut( 500 );
+					}
+				}
+			},
+			threeParty: function ($btn,$section,data) {
+				
+			},
+			nextTime: function ($btn,$section,data,nextSection,nextSlide) {
+				var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+				if ( isMobile ) {
+					window.location.href = '';
+				} else {
+					$section.trigger('close');
+				}
+			}
+		}
+	});
+});
+</script>
+</body>
+</html>
